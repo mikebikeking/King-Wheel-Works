@@ -1,70 +1,212 @@
-# Getting Started with Create React App
+# King Wheel Works
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A professional, portfolio-focused digital brochure website for King Wheel Works, a specialized bicycle wheel building company.
 
-## Available Scripts
+## 🚴 Project Overview
 
-In the project directory, you can run:
+King Wheel Works is a modern, responsive website showcasing custom bicycle wheel building services. The site emphasizes craftsmanship, expertise, and provides a clear path for potential customers to initiate custom wheel build consultations.
 
-### `npm start`
+## ✨ Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Responsive Design**: Fully mobile-responsive layout that works seamlessly from 320px to 4K displays
+- **Modern Tech Stack**: Built with React, Vite, and Tailwind CSS for optimal performance
+- **Five Core Pages**:
+  - **Home**: High-impact hero section with value propositions and featured builds
+  - **Portfolio**: Gallery showcasing custom wheel builds with detailed specifications
+  - **Process**: Step-by-step breakdown of the custom build journey
+  - **About**: Builder biography and company philosophy
+  - **Contact**: Full-featured inquiry form with validation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Accessibility**: WCAG 2.1 AA compliant with semantic HTML and proper ARIA labels
+- **Form Validation**: Client-side validation with helpful error messages
+- **Professional UI**: Clean, minimalist design emphasizing visual quality
 
-### `npm test`
+## 🛠 Technology Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Framework**: React 18
+- **Build Tool**: Vite (fast, modern bundler)
+- **Styling**: Tailwind CSS (utility-first CSS framework)
+- **Routing**: React Router v6
+- **Language**: JavaScript (ES6+)
 
-### `npm run build`
+## 📋 Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Node.js (v18 or higher)
+- npm (v9 or higher)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🚀 Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Installation
 
-### `npm run eject`
+1. Navigate to the project directory:
+```bash
+cd king-wheel-works
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Install dependencies:
+```bash
+npm install
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Development
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Start the development server with hot-reload:
+```bash
+npm run dev
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The application will be available at `http://localhost:5173`
 
-## Learn More
+### Production Build
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Create an optimized production build:
+```bash
+npm run build
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Preview the production build:
+```bash
+npm run preview
+```
 
-### Code Splitting
+## 📁 Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+king-wheel-works/
+├── public/               # Static assets
+├── src/
+│   ├── components/      # Reusable React components
+│   │   ├── Header.jsx
+│   │   ├── Footer.jsx
+│   │   ├── Hero.jsx
+│   │   └── PortfolioCard.jsx
+│   ├── pages/           # Page components
+│   │   ├── Home.jsx
+│   │   ├── Portfolio.jsx
+│   │   ├── Process.jsx
+│   │   ├── About.jsx
+│   │   └── Contact.jsx
+│   ├── App.jsx          # Main routing component
+│   ├── main.jsx         # Application entry point
+│   └── index.css        # Global styles and Tailwind imports
+├── index.html           # HTML template
+├── tailwind.config.js   # Tailwind configuration
+├── vite.config.js       # Vite configuration
+└── package.json         # Dependencies and scripts
+```
 
-### Analyzing the Bundle Size
+## 🎨 Custom Tailwind Classes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The project includes several custom utility classes:
 
-### Making a Progressive Web App
+- `.btn-primary`: Primary call-to-action button
+- `.btn-secondary`: Secondary outlined button
+- `.section-padding`: Consistent section spacing
+- `.container-custom`: Max-width container with responsive padding
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🔧 Configuration
 
-### Advanced Configuration
+### Tailwind Theme
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Custom colors defined in `tailwind.config.js`:
+- `brand-charcoal`: #2c2c2c (dark base)
+- `brand-silver`: #c0c0c0 (metallic accent)
+- `brand-accent`: #4a90e2 (primary blue)
 
-### Deployment
+### Vite Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Standard Vite + React configuration with hot-reload enabled.
 
-### `npm run build` fails to minify
+## 📝 Form Integration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The contact form is fully implemented with client-side validation and is ready for backend integration. Currently, form submissions are logged to the console. To integrate with a backend:
+
+1. Update the `handleSubmit` function in `src/pages/Contact.jsx`
+2. Replace `console.log('Form submitted:', formData)` with your API call
+3. Add error handling for failed submissions
+
+Example integration:
+```javascript
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  const newErrors = validateForm();
+  
+  if (Object.keys(newErrors).length === 0) {
+    setIsSubmitting(true);
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+      if (response.ok) {
+        setSubmitted(true);
+        // Reset form...
+      }
+    } catch (error) {
+      // Handle error
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
+};
+```
+
+## 🎯 Future Enhancements
+
+Potential improvements for future iterations:
+
+- Add real product images to replace placeholders
+- Implement image lightbox/gallery for portfolio
+- Add backend API for form submissions
+- Integrate email notification system
+- Add blog/news section
+- Implement analytics tracking
+- Add customer testimonials section
+- Create admin dashboard for content management
+
+## 🌐 Deployment
+
+This is a static site that can be deployed to any hosting platform:
+
+### Netlify
+```bash
+npm run build
+# Deploy the 'dist' folder to Netlify
+```
+
+### Vercel
+```bash
+npm run build
+# Deploy the 'dist' folder to Vercel
+```
+
+### GitHub Pages
+```bash
+npm run build
+# Use gh-pages or similar to deploy 'dist' folder
+```
+
+## 📱 Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Mobile browsers (iOS Safari, Chrome Mobile)
+
+## 🤝 Contributing
+
+This is a client project. For any modifications or enhancements, please contact the development team.
+
+## 📄 License
+
+Proprietary - All rights reserved by King Wheel Works
+
+## 📞 Support
+
+For technical support or questions about the website, please contact the development team.
+
+---
+
+Built with ⚡ by a senior React developer specializing in high-performance web applications.
