@@ -1,4 +1,14 @@
 import PortfolioCard from '../components/PortfolioCard';
+import enve3_4 from '../assets/Enve_3.4.webp';
+import belgium from '../assets/hed_belgium.webp';
+import jet from '../assets/hed_jet.webp';
+import stans from '../assets/stans_crest.webp';
+import mavic from '../assets/mavic_open_pro.webp';
+import kinlin from '../assets/kinlin_xr.jpg';
+import enve6_7 from '../assets/Enve_6.7.webp';
+import ryde from '../assets/ryde_andra.webp';
+import sun from '../assets/sun_envy.webp';
+
 
 const Portfolio = () => {
   const wheelBuilds = [
@@ -11,7 +21,7 @@ const Portfolio = () => {
         'Sapim CX-Ray Spokes',
         '1,380g total weight'
       ],
-      imagePlaceholder: 'Road Racing Wheelset'
+      image: enve3_4
     },
     {
       title: 'Gravel Adventure',
@@ -22,7 +32,7 @@ const Portfolio = () => {
         'DT Swiss Competition Spokes',
         'Tubeless ready, 30mm internal'
       ],
-      imagePlaceholder: 'Gravel Wheelset'
+      image: belgium
     },
     {
       title: 'Track Sprint',
@@ -33,7 +43,7 @@ const Portfolio = () => {
         'Sapim CX-Ray Spokes',
         'Optimized for velodrome'
       ],
-      imagePlaceholder: 'Track Wheelset'
+      image: jet
     },
     {
       title: 'Mountain XC',
@@ -44,7 +54,7 @@ const Portfolio = () => {
         'Sapim Race Spokes',
         'Ultra-light for climbing'
       ],
-      imagePlaceholder: 'XC MTB Wheelset'
+      image: stans
     },
     {
       title: 'Endurance Road',
@@ -55,7 +65,7 @@ const Portfolio = () => {
         'DT Swiss Champion Spokes',
         'Durable and reliable'
       ],
-      imagePlaceholder: 'Endurance Wheelset'
+      image: mavic
     },
     {
       title: 'Cyclocross Race',
@@ -66,7 +76,7 @@ const Portfolio = () => {
         'Sapim D-Light Spokes',
         'Mud-shedding spoke pattern'
       ],
-      imagePlaceholder: 'Cyclocross Wheelset'
+      image: kinlin
     },
     {
       title: 'Triathlon Aero',
@@ -77,7 +87,7 @@ const Portfolio = () => {
         'Sapim CX-Ray Aero Spokes',
         'Optimized for time trials'
       ],
-      imagePlaceholder: 'Triathlon Wheelset'
+      image: enve6_7
     },
     {
       title: 'Touring Expedition',
@@ -88,7 +98,7 @@ const Portfolio = () => {
         'DT Swiss Alpine III Spokes',
         'Built for loaded touring'
       ],
-      imagePlaceholder: 'Touring Wheelset'
+      image: ryde
     },
     {
       title: 'BMX Racing',
@@ -99,7 +109,7 @@ const Portfolio = () => {
         'Sapim Leader Spokes',
         'Gate start optimized'
       ],
-      imagePlaceholder: 'BMX Wheelset'
+      image: sun
     }
   ];
 
@@ -128,7 +138,8 @@ const Portfolio = () => {
                 title={build.title}
                 subtitle={build.subtitle}
                 specs={build.specs}
-                imagePlaceholder={build.imagePlaceholder}
+                image={build.image}
+              
               />
             ))}
           </div>

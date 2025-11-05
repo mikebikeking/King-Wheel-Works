@@ -1,5 +1,8 @@
 import { Link } from 'react-router-dom';
 import Hero from '../components/Hero';
+import enve3_4 from '../assets/Enve_3.4.webp';
+import belgium from '../assets/hed_belgium.webp';
+import jet from '../assets/hed_jet.webp';
 
 const Home = () => {
   const valueProps = [
@@ -35,15 +38,15 @@ const Home = () => {
   const featuredBuilds = [
     {
       title: 'Road Racing Build',
-      image: 'Lightweight Carbon'
+      image: enve3_4
     },
     {
       title: 'Gravel Adventure',
-      image: 'All-Terrain Alloy'
+      image: belgium
     },
     {
       title: 'Track Sprint',
-      image: 'Fixed Gear Carbon'
+      image: jet
     }
   ];
 
@@ -96,22 +99,30 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {featuredBuilds.map((build, index) => (
               <div key={index} className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300">
-                <div className="aspect-square bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-32 h-32 mx-auto mb-4 rounded-full border-8 border-white relative">
-                      {[...Array(16)].map((_, i) => (
-                        <div
-                          key={i}
-                          className="absolute top-1/2 left-1/2 w-0.5 h-16 bg-white origin-top"
-                          style={{
-                            transform: `translate(-50%, -50%) rotate(${i * 22.5}deg)`,
-                          }}
-                        />
-                      ))}
-                      <div className="absolute inset-0 m-auto w-12 h-12 rounded-full bg-gray-600"></div>
+                <div className="aspect-square bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center overflow-hidden">
+                  {build.image ? (
+                    <img 
+                      src={build.image} 
+                      alt={build.title} 
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <div className="text-center">
+                      <div className="w-32 h-32 mx-auto mb-4 rounded-full border-8 border-white relative">
+                        {[...Array(16)].map((_, i) => (
+                          <div
+                            key={i}
+                            className="absolute top-1/2 left-1/2 w-0.5 h-16 bg-white origin-top"
+                            style={{
+                              transform: `translate(-50%, -50%) rotate(${i * 22.5}deg)`,
+                            }}
+                          />
+                        ))}
+                        <div className="absolute inset-0 m-auto w-12 h-12 rounded-full bg-gray-600"></div>
+                      </div>
+                      <p className="text-white font-semibold">{build.title}</p>
                     </div>
-                    <p className="text-white font-semibold">{build.image}</p>
-                  </div>
+                  )}
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                   <div className="p-6 text-white">

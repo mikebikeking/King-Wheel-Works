@@ -1,24 +1,32 @@
-const PortfolioCard = ({ title, subtitle, specs, imagePlaceholder }) => {
+const PortfolioCard = ({ title, subtitle, specs, image}) => {
   return (
     <div className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 bg-white">
-      {/* Image Placeholder */}
+      {/* Image */}
       <div className="aspect-square bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center overflow-hidden">
-        <div className="text-center p-8">
-          <div className="w-32 h-32 mx-auto mb-4 rounded-full border-8 border-gray-400 relative">
-            {/* Spoke pattern simulation */}
-            {[...Array(12)].map((_, i) => (
-              <div
-                key={i}
-                className="absolute top-1/2 left-1/2 w-0.5 h-16 bg-gray-400 origin-top"
-                style={{
-                  transform: `translate(-50%, -50%) rotate(${i * 30}deg)`,
-                }}
-              />
-            ))}
-            <div className="absolute inset-0 m-auto w-12 h-12 rounded-full bg-gray-500"></div>
+        {image ? (
+          <img 
+            src={image} 
+            alt={title} 
+            className="w-full h-full object-cover"
+          />
+        ) : (
+          <div className="text-center p-8">
+            <div className="w-32 h-32 mx-auto mb-4 rounded-full border-8 border-gray-400 relative">
+              {/* Spoke pattern simulation */}
+              {[...Array(12)].map((_, i) => (
+                <div
+                  key={i}
+                  className="absolute top-1/2 left-1/2 w-0.5 h-16 bg-gray-400 origin-top"
+                  style={{
+                    transform: `translate(-50%, -50%) rotate(${i * 30}deg)`,
+                  }}
+                />
+              ))}
+              <div className="absolute inset-0 m-auto w-12 h-12 rounded-full bg-gray-500"></div>
+            </div>
+            
           </div>
-          <p className="text-sm font-medium text-gray-500">{imagePlaceholder}</p>
-        </div>
+        )}
       </div>
 
       {/* Overlay Content */}
